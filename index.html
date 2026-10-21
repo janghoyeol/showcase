@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>장호열 — AI 에이전트 포트폴리오</title>
+<meta name="description" content="공공데이터를 Claude tool-use 에이전트로 조회하고 출처와 함께 답하는 프로젝트 모음">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Portfolio</p>
+  <h1>장호열</h1>
+  <p class="lede">
+    공공데이터를 Claude tool-use 에이전트로 조회하고, 계산은 코드로, 답변에는 항상
+    출처를 붙이는 같은 설계 원칙을 여러 도메인에 이식해 쌓은 프로젝트 모음입니다.
+  </p>
+  <ul class="principles">
+    <li>출처 없는 숫자는 없다</li>
+    <li>계산은 모델이 암산하지 않는다</li>
+    <li>고정 정답셋으로 정확도를 측정한다</li>
+  </ul>
+</header>
+
+<main class="grid">
+
+  <article class="card">
+    <div class="card-top">
+      <h2>air-agent</h2>
+      <span class="badge live">Live</span>
+    </div>
+    <p class="desc">
+      구 이름을 물으면 에어코리아·기상청 실시간 공공데이터를 조회해 지금 나가도 되는지,
+      마스크가 필요한지 출처와 함께 답하는 AI 에이전트. 서울 25개 자치구 지원.
+    </p>
+    <p class="tags">Python · FastAPI · Claude tool-use · 실시간 데이터</p>
+    <div class="actions">
+      <a class="btn primary" href="https://air-agent-b5s1.onrender.com" target="_blank" rel="noopener">사이트 방문</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <h2>corp-agent</h2>
+      <span class="badge live">Live</span>
+    </div>
+    <p class="desc">
+      회사명을 입력하면 DART(전자공시시스템) 재무제표를 조회해 매출·영업이익·순이익
+      추이를 분석하고, 모든 숫자에 공시 접수번호를 출처로 붙여 답하는 에이전트.
+    </p>
+    <p class="tags">Python · FastAPI · Claude tool-use · DART</p>
+    <div class="actions">
+      <a class="btn primary" href="https://corp-agent.onrender.com/" target="_blank" rel="noopener">사이트 방문</a>
+      <a class="btn ghost" href="https://github.com/janghoyeol/corp-agent" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <h2>realty-agent</h2>
+      <span class="badge live">Live</span>
+    </div>
+    <p class="desc">
+      아파트 이름이나 동네를 물으면 국토교통부 실거래가 데이터로 전용면적당 단가와
+      시세 추이를 계산하고, 모든 숫자에 출처를 붙여 답하는 에이전트.
+    </p>
+    <p class="tags">Python · FastAPI · Claude tool-use · 실거래가</p>
+    <div class="actions">
+      <a class="btn primary" href="https://realty-agent-01ar.onrender.com/" target="_blank" rel="noopener">사이트 방문</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <h2>stat-agent</h2>
+      <span class="badge live">Live</span>
+    </div>
+    <p class="desc">
+      자연어로 질문하면 국가통계포털(KOSIS)에서 알맞은 통계표를 찾아 수치를 조회하고,
+      출처(통계표명·기준 시점)와 함께 답하는 AI 에이전트.
+    </p>
+    <p class="tags">Python · FastAPI · Claude tool-use · KOSIS</p>
+    <div class="actions">
+      <a class="btn primary" href="https://stat-agent.onrender.com" target="_blank" rel="noopener">사이트 방문</a>
+      <a class="btn ghost" href="https://github.com/janghoyeol/stat-agent" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <h2>조선시대 죄인 전생 스캐너</h2>
+      <span class="badge live">Live</span>
+    </div>
+    <p class="desc">
+      이름을 넣으면 전생에 조선에서 지은 죄와 의금부로 압송되는 과정을 체포령 형식으로
+      보여주는 창작 시뮬레이션. 압송 길의 선택에 따라 매번 다른 결말이 나온다.
+    </p>
+    <p class="tags">JavaScript · 클라이언트 전용(서버 저장 없음)</p>
+    <div class="actions">
+      <a class="btn primary" href="https://joseon-simul.pages.dev/" target="_blank" rel="noopener">사이트 방문</a>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <a href="https://github.com/janghoyeol" target="_blank" rel="noopener">github.com/janghoyeol</a>
+</footer>
+</body>
+</html>
