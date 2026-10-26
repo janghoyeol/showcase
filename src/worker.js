@@ -9,6 +9,7 @@ const ALLOWED_TARGETS = new Set([
   "https://realty-agent-01ar.onrender.com/",
   "https://stat-agent.onrender.com",
   "https://startup-sector-classifier.onrender.com",
+  "https://nsmc-sentiment-classifier.onrender.com",
 ]);
 
 const STATUS_TIMEOUT_MS = 20_000;
