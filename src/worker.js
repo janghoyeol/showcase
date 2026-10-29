@@ -8,6 +8,7 @@ const ALLOWED_TARGETS = new Set([
   "https://corp-agent.onrender.com/",
   "https://realty-agent-01ar.onrender.com/",
   "https://stat-agent.onrender.com",
+  "https://trend-agent-3ld5.onrender.com",
   "https://startup-sector-classifier.onrender.com",
   "https://nsmc-sentiment-classifier.onrender.com",
 ]);
