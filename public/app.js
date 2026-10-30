@@ -44,3 +44,26 @@ async function wake(el, attempt = 1) {
 }
 
 document.querySelectorAll(".badge[data-wake-url]").forEach((el) => wake(el));
+
+// 작동 예시: 잠든 서버를 기다리지 않아도 실제 실행 화면을 바로 볼 수 있게 한다.
+const dialog = document.getElementById("demo-dialog");
+const dialogImg = dialog.querySelector(".demo-body img");
+
+document.querySelectorAll("[data-demo]").forEach((el) => {
+  el.addEventListener("click", () => {
+    const article = el.closest("article");
+    const name = article ? article.querySelector("h3").textContent : "";
+    dialog.querySelector(".demo-title").textContent = `${name} 작동 예시`;
+    dialog.querySelector(".demo-q").textContent = `입력: ${el.dataset.q}`;
+    dialogImg.src = el.dataset.demo;
+    dialogImg.alt = `${name} 실행 화면`;
+    dialog.querySelector(".demo-body").scrollTop = 0;
+    dialog.showModal();
+  });
+});
+
+dialog.querySelector(".demo-close").addEventListener("click", () => dialog.close());
+// 바깥(backdrop) 클릭으로 닫기
+dialog.addEventListener("click", (e) => {
+  if (e.target === dialog) dialog.close();
+});

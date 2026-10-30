@@ -31,6 +31,9 @@
 
 <main>
 
+<p class="wake-note">Render 무료 서버에서 도는 프로젝트는 15분 동안 접속이 없으면 잠들고, 깨우는 데 1분 정도 걸립니다.
+기다리지 않아도 되도록 <strong>작동 예시</strong>에 실제 실행 화면을 담아 두었습니다.</p>
+
 <section id="featured" class="section">
   <div class="section-head">
     <h2>대표작</h2>
@@ -38,9 +41,10 @@
   </div>
 
   <article class="feature">
-    <a class="shot" href="https://trend-agent-3ld5.onrender.com" target="_blank" rel="noopener">
-      <img src="img/trend.webp" width="960" height="600" loading="lazy" alt="trend-agent 화면: 오늘의 급등 키워드와 뉴스 출처가 붙은 원인 설명">
-    </a>
+    <button class="shot" type="button" data-demo="img/demo/trend.webp" data-q="태풍" aria-label="작동 예시 크게 보기">
+      <img src="img/demo/trend.webp" width="870" height="835" loading="lazy" alt="trend-agent 실행 화면: 태풍 검색 급등 그래프와 뉴스 출처가 붙은 원인 설명">
+      <span class="shot-label">작동 예시 크게 보기</span>
+    </button>
     <div class="feature-body">
       <div class="card-top">
         <h3>trend-agent</h3>
@@ -58,6 +62,7 @@
       </ul>
       <p class="tags">Python · FastAPI · Claude tool-use · NAVER API HUB</p>
       <div class="actions">
+        <button class="btn demo" type="button" data-demo="img/demo/trend.webp" data-q="태풍">작동 예시</button>
         <a class="btn primary" href="https://trend-agent-3ld5.onrender.com" target="_blank" rel="noopener">사이트 방문</a>
         <a class="btn ghost" href="https://github.com/janghoyeol/trend-agent" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -65,9 +70,10 @@
   </article>
 
   <article class="feature">
-    <a class="shot" href="https://nsmc-sentiment-classifier.onrender.com" target="_blank" rel="noopener">
-      <img src="img/nsmc.webp" width="960" height="600" loading="lazy" alt="nsmc-sentiment-classifier 화면: 영화 리뷰 입력창과 모델 설명">
-    </a>
+    <button class="shot" type="button" data-demo="img/demo/nsmc.webp" data-q="배우들 연기가 너무 좋고 스토리도 탄탄해서 시간 가는 줄 모르고 봤어요" aria-label="작동 예시 크게 보기">
+      <img src="img/demo/nsmc.webp" width="660" height="625" loading="lazy" alt="nsmc-sentiment-classifier 실행 화면: 영화 리뷰 입력과 긍정 99.6% 예측 결과">
+      <span class="shot-label">작동 예시 크게 보기</span>
+    </button>
     <div class="feature-body">
       <div class="card-top">
         <h3>nsmc-sentiment-classifier</h3>
@@ -85,6 +91,7 @@
       </ul>
       <p class="tags">Python · PyTorch · 자모 단위 토크나이저 · 처음부터 학습</p>
       <div class="actions">
+        <button class="btn demo" type="button" data-demo="img/demo/nsmc.webp" data-q="배우들 연기가 너무 좋고 스토리도 탄탄해서 시간 가는 줄 모르고 봤어요">작동 예시</button>
         <a class="btn primary" href="https://nsmc-sentiment-classifier.onrender.com" target="_blank" rel="noopener">사이트 방문</a>
         <a class="btn ghost" href="https://github.com/janghoyeol/nsmc-sentiment-classifier" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -110,6 +117,7 @@
       </div>
       <p class="kicker"><strong>25개</strong><span>서울 자치구 지원</span></p>
       <div class="actions">
+        <button class="btn demo" type="button" data-demo="img/demo/air.webp" data-q="강남구 지금 미세먼지 어때?">작동 예시</button>
         <a class="btn primary" href="https://air-agent-b5s1.onrender.com" target="_blank" rel="noopener">사이트 방문</a>
       </div>
     </article>
@@ -125,6 +133,7 @@
       </div>
       <p class="kicker"><strong>DART</strong><span>전자공시시스템</span></p>
       <div class="actions">
+        <button class="btn demo" type="button" data-demo="img/demo/corp.webp" data-q="카카오 최근 3년 매출 추이">작동 예시</button>
         <a class="btn primary" href="https://corp-agent.onrender.com/" target="_blank" rel="noopener">사이트 방문</a>
         <a class="btn ghost" href="https://github.com/janghoyeol/corp-agent" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -141,6 +150,7 @@
       </div>
       <p class="kicker"><strong>실거래가</strong><span>국토교통부</span></p>
       <div class="actions">
+        <button class="btn demo" type="button" data-demo="img/demo/realty.webp" data-q="대치동 은마아파트 최근 1년 시세 어때?">작동 예시</button>
         <a class="btn primary" href="https://realty-agent-01ar.onrender.com/" target="_blank" rel="noopener">사이트 방문</a>
       </div>
     </article>
@@ -156,6 +166,7 @@
       </div>
       <p class="kicker"><strong>KOSIS</strong><span>국가통계포털</span></p>
       <div class="actions">
+        <button class="btn demo" type="button" data-demo="img/demo/stat.webp" data-q="평택시 인구는 2022년에서 2023년 사이 얼마나 늘었어?">작동 예시</button>
         <a class="btn primary" href="https://stat-agent.onrender.com" target="_blank" rel="noopener">사이트 방문</a>
         <a class="btn ghost" href="https://github.com/janghoyeol/stat-agent" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -198,6 +209,7 @@
       </div>
       <p class="kicker"><strong>34.9%</strong><span>검증 정확도 · 사전학습 없이 23.4%</span></p>
       <div class="actions">
+        <button class="btn demo" type="button" data-demo="img/demo/startup.webp" data-q="주식회사 OOO은 2015년에 설립된 소프트웨어 개발 기업으로, 클라우드 기반 재고관리 솔루션을 주요 제품으로 한다.">작동 예시</button>
         <a class="btn primary" href="https://startup-sector-classifier.onrender.com" target="_blank" rel="noopener">사이트 방문</a>
         <a class="btn ghost" href="https://github.com/janghoyeol/startup-sector-classifier" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -249,6 +261,17 @@
 <footer>
   <a href="https://github.com/janghoyeol" target="_blank" rel="noopener">github.com/janghoyeol</a>
 </footer>
+<dialog id="demo-dialog" aria-labelledby="demo-title">
+  <div class="demo-head">
+    <div>
+      <p id="demo-title" class="demo-title">작동 예시</p>
+      <p class="demo-q"></p>
+    </div>
+    <button class="demo-close" type="button" aria-label="닫기">✕</button>
+  </div>
+  <div class="demo-body"><img alt=""></div>
+  <p class="demo-foot">2026-10-30 실제 실행 화면. 사이트에서 직접 해보려면 "사이트 방문"을 누르세요.</p>
+</dialog>
 <script src="app.js"></script>
 </body>
 </html>
