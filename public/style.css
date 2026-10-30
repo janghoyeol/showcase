@@ -63,25 +63,6 @@ body {
   color: var(--muted);
 }
 
-.grid {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 16px 20px 64px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
 .card-top {
   display: flex;
   align-items: center;
@@ -89,9 +70,10 @@ body {
   gap: 8px;
 }
 
-.card-top h2 {
+.card-top h3 {
   margin: 0;
   font-size: 19px;
+  overflow-wrap: anywhere;
 }
 
 .badge {
@@ -162,9 +144,172 @@ body {
   color: var(--text);
 }
 
+html { scroll-behavior: smooth; }
+
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 18px;
+  margin-top: 28px;
+  font-size: 14px;
+}
+
+.toc a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+.toc a:hover { border-color: var(--accent); }
+
+.section {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 20px 8px;
+  scroll-margin-top: 16px;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.section-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* 대표작: 스크린샷 + 지표 + 설계 포인트 */
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.shot {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.shot:hover img { transform: scale(1.02); }
+
+.feature-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metric {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.metric strong {
+  font-size: 40px;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+.metric span,
+.kicker span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.points {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.points li + li { margin-top: 4px; }
+
+/* 묶음 목록: 이름·설명 | 핵심 지표 | 버튼 */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px 210px;
+  gap: 20px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 22px;
+}
+
+.item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item .card-top { justify-content: flex-start; }
+
+.item .card-top h3 { font-size: 17px; }
+
+.kicker {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.kicker strong {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.item .actions {
+  margin-top: 0;
+  justify-content: flex-end;
+}
+
+@media (max-width: 860px) {
+  .feature { grid-template-columns: 1fr; padding: 16px; gap: 18px; }
+  .item { grid-template-columns: 1fr; gap: 12px; padding: 16px; }
+  .kicker { flex-direction: row; align-items: baseline; gap: 8px; }
+  .item .actions { justify-content: flex-start; }
+}
+
 footer {
   text-align: center;
-  padding: 24px 20px 48px;
+  padding: 48px 20px 48px;
   color: var(--muted);
   font-size: 13px;
 }
