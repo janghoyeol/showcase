@@ -110,14 +110,15 @@
       <div class="item-main">
         <div class="card-top">
           <h3>korea-data-mcp</h3>
-          <span class="badge local">MCP 서버 · 로컬 설치</span>
+          <span class="badge checking" data-wake-url="https://korea-data-mcp.onrender.com">확인 중…</span>
         </div>
-        <p class="desc">아래 에이전트 4종의 도구 16개를 MCP 서버 하나로 묶었다. Claude Desktop·Claude Code에 설정 한 줄로 꽂으면 Claude가 통계·공시·대기질·실거래가 도구를 직접 골라 쓰고, 출처와 계산 규칙은 원래 에이전트 그대로다.</p>
-        <p class="tags">Python · MCP(stdio) · 원본 도구 스키마 그대로 · 키 있는 도메인만 켜짐</p>
+        <p class="desc">아래 에이전트 4종의 도구 16개를 MCP 서버 하나로 묶었다. 설치 없이 URL 하나를 Claude 커넥터에 넣으면 Claude가 통계·공시·대기질·실거래가 도구를 직접 골라 쓰고, 출처와 계산 규칙은 원래 에이전트 그대로다.</p>
+        <p class="tags">Python · MCP(Streamable HTTP·stdio) · 공용 한도 보호(캐시·일일 상한·IP 제한)</p>
       </div>
       <p class="kicker"><strong>16개</strong><span>도구 · 공공 API 4종</span></p>
       <div class="actions">
-        <button class="btn demo" type="button" data-demo="img/demo/korea-data-mcp.webp" data-q="카카오 최근 3년 매출 추이" data-foot="2026-10-30 실제 Claude ↔ MCP 대화 기록(scripts/claude_check.py). 웹 화면이 없는 서버라 GitHub의 설치 방법으로 직접 연결해 보세요.">작동 예시</button>
+        <button class="btn demo" type="button" data-demo="img/demo/korea-data-mcp.webp" data-q="카카오 최근 3년 매출 추이" data-foot="2026-10-30 실제 Claude ↔ MCP 대화 기록(scripts/claude_check.py). 직접 써 보려면 Claude 커넥터에 https://korea-data-mcp.onrender.com/mcp 를 넣으세요.">작동 예시</button>
+        <a class="btn primary" href="https://github.com/janghoyeol/korea-data-mcp#원격-서버-설치-없이" target="_blank" rel="noopener">연결 방법</a>
         <a class="btn ghost" href="https://github.com/janghoyeol/korea-data-mcp" target="_blank" rel="noopener">GitHub</a>
       </div>
     </article>

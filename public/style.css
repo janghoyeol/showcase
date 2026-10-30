@@ -95,11 +95,6 @@ body {
   animation: pulse 1.4s ease-in-out infinite;
 }
 
-.badge.local {
-  background: rgba(110, 168, 254, 0.15);
-  color: var(--accent);
-}
-
 .badge.error {
   background: rgba(248, 113, 113, 0.15);
   color: #f87171;

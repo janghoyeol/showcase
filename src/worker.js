@@ -11,6 +11,7 @@ const ALLOWED_TARGETS = new Set([
   "https://trend-agent-3ld5.onrender.com",
   "https://startup-sector-classifier.onrender.com",
   "https://nsmc-sentiment-classifier.onrender.com",
+  "https://korea-data-mcp.onrender.com",
 ]);
 
 const STATUS_TIMEOUT_MS = 20_000;
