@@ -52,17 +52,20 @@
       </div>
       <p class="metric"><strong>98%</strong><span>정답셋 50문항 × 3회 정확도 · Haiku 5.5 문항당 $0.0016</span></p>
       <p class="desc">
-        가상 고객사의 사내 DB에 자연어로 물으면, 묻는 사람의 권한 안에서 SQL로 조회해 답하고
-        숫자마다 그 숫자를 만든 쿼리 ID를 붙이는 데이터 에이전트.
+        가상 고객사의 사내 DB와 사내 문서에 자연어로 물으면, 묻는 사람의 권한 안에서 SQL과 규정으로 답하고
+        숫자에는 쿼리 ID, 규정에는 원문 인용을 붙이는 데이터 에이전트. 환불은 제안만 하고 사람이 승인한다.
       </p>
       <ul class="points">
         <li>권한은 프롬프트가 아니라 DB가 거절: 직원별 DB 역할·행 단위 보안·개인정보 열 권한, 우회 SQL까지 테스트</li>
         <li>"매출"의 뜻을 고객과 합의한 지표 사전 11개, 지저분한 스키마의 함정 14개를 실측해 문서화</li>
-        <li>정답 SQL은 사람이 작성(함정·권한 17문항 직접), 틀린 실행 8건을 하나씩 읽어 원인 분류</li>
+        <li>사내 문서 30개(옛 판·초안·무승인 공지 함정)도 DB 권한으로 거르고, 인용 문장이 원문에 있는지 코드가 확인 — 문서 질문 98%</li>
+        <li>에이전트는 쓰기 권한 0, 환불은 DB 함수로 제안만: 승인권자·권역·한도·본인 승인 금지를 DB가 검사, 제안하면 안 되는 문항에서 잘못된 제안 0</li>
+        <li>정답 SQL은 사람이 작성(함정·권한 17문항 직접), 틀린 실행을 하나씩 읽어 원인 분류</li>
       </ul>
-      <p class="tags">Python · PostgreSQL(RLS) · Claude tool-use · FastAPI · 정답셋 평가</p>
+      <p class="tags">Python · PostgreSQL(RLS·전문 검색) · Claude tool-use · FastAPI · 정답셋 평가 · GitHub Actions</p>
       <div class="actions">
         <button class="btn demo" type="button" data-demo="img/demo/inhouse.webp" data-q="2017년 매출은 얼마야? — 본사 분석가 vs 남동부 권역 매니저" data-foot="2026-11-04 실제 실행 화면. 같은 질문·같은 SQL인데 권한에 따라 전국 매출과 남동부 매출로 답이 갈린다. 사이트에서 직원을 바꿔 직접 물어볼 수 있습니다.">작동 예시</button>
+        <button class="btn demo" type="button" data-demo="img/demo/inhouse-refund.webp" data-q="주문 … 파손 환불 제안 올려줘 — CS 담당 vs 본사 분석가" data-foot="2026-11-04 실제 실행 화면. CS 담당은 규정과 SQL로 금액을 계산해 제안만 등록하고, 본사 분석가의 같은 요청은 DB가 거절한다. 사이트의 환불 승인 화면에서 CS 팀장으로 승인해 볼 수 있습니다(가상 DB, 매일 초기화).">환불 승인 흐름</button>
         <a class="btn primary" href="https://inhouse-data-agent.onrender.com" target="_blank" rel="noopener">사이트 방문</a>
         <a class="btn ghost" href="https://github.com/janghoyeol/inhouse-data-agent#readme" target="_blank" rel="noopener">사례 연구 (README)</a>
         <a class="btn ghost" href="https://github.com/janghoyeol/inhouse-data-agent" target="_blank" rel="noopener">GitHub</a>
