@@ -37,8 +37,37 @@
 <section id="featured" class="section">
   <div class="section-head">
     <h2>대표작</h2>
-    <p>에이전트 하나, 직접 학습한 모델 하나.</p>
+    <p>사내 데이터 에이전트 하나, 공개 데이터 에이전트 하나, 직접 학습한 모델 하나.</p>
   </div>
+
+  <article class="feature">
+    <button class="shot" type="button" data-demo="img/demo/inhouse.webp" data-q="2017년 매출은 얼마야? — 본사 분석가 vs 남동부 권역 매니저" data-foot="2026-11-04 실제 실행 화면(로컬). 같은 질문·같은 SQL인데 권한에 따라 전국 매출과 남동부 매출로 답이 갈린다. 실행 방법은 GitHub에 있습니다." aria-label="작동 예시 크게 보기">
+      <img src="img/demo/inhouse.webp" width="1280" height="1201" loading="lazy" alt="inhouse-data-agent 실행 화면: 같은 매출 질문에 본사 분석가는 전국 6,031,684.57 헤알, 남동부 매니저는 자기 권역 3,883,073.11 헤알을 답하고 각각 실행한 SQL과 쿼리 ID가 붙어 있다">
+      <span class="shot-label">작동 예시 크게 보기</span>
+    </button>
+    <div class="feature-body">
+      <div class="card-top">
+        <h3>inhouse-data-agent</h3>
+        <span class="badge local">로컬 실행</span>
+      </div>
+      <p class="metric"><strong>98%</strong><span>정답셋 50문항 × 3회 정확도 · Haiku 5.5 문항당 $0.0016</span></p>
+      <p class="desc">
+        가상 고객사의 사내 DB에 자연어로 물으면, 묻는 사람의 권한 안에서 SQL로 조회해 답하고
+        숫자마다 그 숫자를 만든 쿼리 ID를 붙이는 데이터 에이전트.
+      </p>
+      <ul class="points">
+        <li>권한은 프롬프트가 아니라 DB가 거절: 직원별 DB 역할·행 단위 보안·개인정보 열 권한, 우회 SQL까지 테스트</li>
+        <li>"매출"의 뜻을 고객과 합의한 지표 사전 11개, 지저분한 스키마의 함정 14개를 실측해 문서화</li>
+        <li>정답 SQL은 사람이 작성(함정·권한 17문항 직접), 틀린 실행 8건을 하나씩 읽어 원인 분류</li>
+      </ul>
+      <p class="tags">Python · PostgreSQL(RLS) · Claude tool-use · FastAPI · 정답셋 평가</p>
+      <div class="actions">
+        <button class="btn demo" type="button" data-demo="img/demo/inhouse.webp" data-q="2017년 매출은 얼마야? — 본사 분석가 vs 남동부 권역 매니저" data-foot="2026-11-04 실제 실행 화면(로컬). 같은 질문·같은 SQL인데 권한에 따라 전국 매출과 남동부 매출로 답이 갈린다. 실행 방법은 GitHub에 있습니다.">작동 예시</button>
+        <a class="btn primary" href="https://github.com/janghoyeol/inhouse-data-agent#readme" target="_blank" rel="noopener">사례 연구 (README)</a>
+        <a class="btn ghost" href="https://github.com/janghoyeol/inhouse-data-agent" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </article>
 
   <article class="feature">
     <button class="shot" type="button" data-demo="img/demo/trend.webp" data-q="태풍" aria-label="작동 예시 크게 보기">
